@@ -319,14 +319,12 @@ init -1000 python:
     # Set developer to the auto default.
     config.original_developer = "auto"
 
-    #if config.script_version:
-    #    config.developer = False
-    #    config.default_developer = False
-    #else:
-    #    config.developer = True
-    #    config.default_developer = True
-
-    config.developer = True
+    if config.script_version:
+        config.developer = False
+        config.default_developer = False
+    else:
+        config.developer = True
+        config.default_developer = True
 
     # Lock the library object.
     config.locked = True
